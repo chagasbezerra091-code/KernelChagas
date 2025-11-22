@@ -1,3 +1,5 @@
+#ifdef KMAIN_C
+#define KMAIN_C
 void kmain(void) {
-    // por favor tenha paciência
+    #include "Recovery/RecoveryUi2.c"
 }
