@@ -1,0 +1,30 @@
+#x86 Kernel Configuration File (Version 1)
+#
+#Kernel Name: KernelChagas (KC)
+#
+#Architecture: x86_64
+#
+#Author: Chagas Inc./LLC
+#
+#Description:
+#
+#Configuration file for the KernelChagas experimental OS kernel.
+#
+#
+#Version 1 — base configuration.
+
+[Kernel] Name = KernelChagas ShortName = KC Version = 1 Author = "Chagas Inc./LLC" Architecture = x86_64 BuildType = experimental
+
+[Memory] KernelLoadAddress = 0x00100000   # 1MB StackSize = 16384                # 16KB PageSize = 4096 EnablePaging = true
+
+[Boot] BootProtocol = multiboot2 EntrySymbol = _start
+
+[Debug] EnableSerialLog = true SerialPort = 0x3F8 LogLevel = 2   # 0=quiet,1=errors,2=info,3=debug,4=trace
+
+[Features] EnableGDT = true EnableIDT = true EnableISR = true EnableTSS = false EnableACPI = false
+
+[Filesystem] EnableInitrd = false DefaultRoot = "/"
+
+[Developer] AllowUnsafeExperiments = true EnableVerboseLinker = true
+
+#End of config
