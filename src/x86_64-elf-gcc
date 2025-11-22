@@ -1,0 +1,3 @@
+x86_64-elf-gcc -c kernel.S -o kernel.o
+x86_64-elf-gcc -c kernel.c -o kernel_c.o
+x86_64-elf-ld -T linker.ld -o kernel.bin kernel.o kernel_c.o
